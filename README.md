@@ -25,6 +25,9 @@ botones para llamar las acciones
 ● Préstamo
 
 TECNOLOGÍAS UTILIZADAS
+
+
+
 <img width="607" height="159" alt="image" src="https://github.com/user-attachments/assets/35012a5c-6ac7-4faf-8efe-c33662ff5203" />
 
 
@@ -36,44 +39,10 @@ INSTALACION Y EJECUCION
 
   
 DER
+
+
+
 <img width="539" height="399" alt="image" src="https://github.com/user-attachments/assets/5ac0a7ca-a2b8-4621-81b4-1eebfd3f6c43" />
 
 
-SCRIPT BASE DE DATOS
 
---Crear tabla usuario--
-CREATE TABLE Usuario (
-idUsuario INTEGER PRIMARY KEY,
-nombre TEXT NOT NULL,
-apellido TEXT NOT NULL,
-email TEXT UNIQUE NOT NULL,
-telefono TEXT,
-direccion TEXT
-);
--- Crear Tabla Libro--
-CREATE TABLE Libro (
-ISBN TEXT PRIMARY KEY,
-titulo TEXT NOT NULL,
-autor TEXT NOT NULL,
-anioPublicacion INTEGER,X
-editorial TEXT,
-categoria TEXT
-);
--- Crear Tabla Prestamo--
-CREATE TABLE Prestamo (
-idPrestamo INTEGER PRIMARY KEY AUTOINCREMENT,
-idUsuario INTEGER NOT NULL,
-idCopia INTEGER NOT NULL,
-fechaPrestamo TEXT NOT NULL,
-fechaEsperadaDevolucion TEXT NOT NULL,
-fechaRealDevolucion TEXT,
-FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
-);
-
---Crear Tabla Bibliotecario--
-CREATE TABLE bibliotecario(
-    idUsuario INT,
-    nombreUsuario TEXT,
-    clave TEXT,
-    correo TEXT
-) ;
