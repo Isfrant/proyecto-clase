@@ -1,0 +1,38 @@
+
+CREATE TABLE Usuario (
+idUsuario INTEGER PRIMARY KEY,
+nombre TEXT NOT NULL,
+apellido TEXT NOT NULL,
+email TEXT UNIQUE NOT NULL,
+telefono TEXT,
+direccion TEXT
+);
+
+
+
+CREATE TABLE Libro (
+ISBN TEXT PRIMARY KEY,
+titulo TEXT NOT NULL,
+autor TEXT NOT NULL,
+anioPublicacion INTEGER,X 
+editorial TEXT,
+categoria TEXT
+);
+
+CREATE TABLE Prestamo (
+idPrestamo INTEGER PRIMARY KEY AUTOINCREMENT,
+idUsuario INTEGER NOT NULL,
+idCopia INTEGER NOT NULL,
+fechaPrestamo TEXT NOT NULL,
+fechaEsperadaDevolucion TEXT NOT NULL,
+fechaRealDevolucion TEXT,
+FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+);
+
+
+CREATE TABLE bibliotecario(
+    id INT,
+    nombreUsuario TEXT,
+    clave TEXT,
+    correo TEXT
+) ;
