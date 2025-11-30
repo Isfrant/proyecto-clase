@@ -1,3 +1,7 @@
+AUTORES: FIDEL GARCIA, CARLOS FABIAN GARCES
+
+
+
 DESCRIPCIÓN DEL PROYECTO
 
 El Sistema de Gestión de Inventario de Biblioteca es una aplicación de escritorio desarrollada en
